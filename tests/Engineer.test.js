@@ -1,16 +1,24 @@
 const Engineer = require("../lib/Engineer");
-const inquirer = require("inquirer");
 
 describe("Engineer", () => {
-    it("Engineer with all correct github", () => {
+    it("Engineer with all correct details", () => {
         //Arrange
-        const testEngineer = new Engineer(16, "Murad", "murad.manni@gmail.com", "muradmanni");
-
+        answers={
+            empName: 'Nazish',
+            empId: '02',
+            empEmail: 'nazsih@gmail.com',
+            github: 'muradmanni',
+            empType: 'Engineer'
+          }
+        
+        //Action
+        const testEngineer = new Engineer(answers.empId, answers.empName, answers.empEmail, answers.github);
+        
         //Assert
-        expect(testEngineer.getName()).toEqual("Murad");
-        expect(testEngineer.getId()).toEqual(16);
-        expect(testEngineer.getEmail()).toEqual("murad.manni@gmail.com");
-        expect(testEngineer.getGithub()).toEqual("muradmanni");
+        expect(testEngineer.getName()).toEqual(answers.empName);
+        expect(testEngineer.getId()).toEqual(answers.empId);
+        expect(testEngineer.getEmail()).toEqual(answers.empEmail);
+        expect(testEngineer.getGithub()).toEqual(answers.github);
     })
 });
 
