@@ -8,8 +8,8 @@
     "test": "tests"
   },
   "scripts": {
-    "start" : "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/muradmanni/homework-team-profile-generator#readme",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "jest": "^28.0.3"
   }
 }
