@@ -1,9 +1,10 @@
-const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const inquirer = require("inquirer");
 const Engineer = require("./lib/Engineer");
-const Choice = require("inquirer/lib/objects/choice");
 const Intern = require("./lib/Intern");
+const htmlgenerator = require("./src/htmlgenerator");
+
+
 
 console.log("Please build your team");
 
@@ -66,14 +67,8 @@ const  init = async () =>
         })
         
     }while (addMore)
-    console.log(newManager.showValues());
+
+    htmlgenerator(newManager.showValues());
 }
 
 init();
-
-
-// const newManager = new Manager();    
-// const newEngineer = new Engineer();
-// const newIntern = new Intern();
-
-// console.log(newEngineer.questions('Engineer'));
