@@ -61,14 +61,13 @@ const  init = async () =>
             }
             else
             {
-                console.log("I am exiting");
                 addMore=false;
             }
         })
         
     }while (addMore)
 
-    htmlgenerator(newManager.showValues());
+    htmlgenerator(newManager.getTeam());
 }
 
 init();
